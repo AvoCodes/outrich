@@ -9,7 +9,6 @@ import { CSVUploader } from "./fire-enrich/csv-uploader";
 import { UnifiedEnrichmentView } from "./fire-enrich/unified-enrichment-view";
 import { EnrichmentTable } from "./fire-enrich/enrichment-table";
 import { CSVRow, EnrichmentField } from "@/lib/types";
-import { FIRE_ENRICH_CONFIG } from "./fire-enrich/config";
 import {
   Dialog,
   DialogContent,
@@ -233,10 +232,7 @@ export default function HomePage() {
           </span>
         </h1>
         <p className="text-sm text-muted-foreground mt-3 opacity-0 animate-fade-up [animation-duration:500ms] [animation-delay:600ms] [animation-fill-mode:forwards]">
-          {FIRE_ENRICH_CONFIG.FEATURES.IS_UNLIMITED ? 
-            'Unlimited enrichment' : 
-            `Hosted limit: ${FIRE_ENRICH_CONFIG.CSV_LIMITS.MAX_ROWS} rows, ${FIRE_ENRICH_CONFIG.CSV_LIMITS.MAX_COLUMNS} columns • Self-deployment: Unlimited`
-          }
+          Unlimited enrichment • Self-deployment
         </p>
       </div>
 
