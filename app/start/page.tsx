@@ -482,7 +482,7 @@ export default function LandingPage() {
         <div className="text-center">
           <p className="text-xs text-muted-foreground">
             Or try our{" "}
-            <Link href="/fire-enrich" className="text-orange-600 hover:text-orange-700 font-medium underline">
+            <Link href="/" className="text-orange-600 hover:text-orange-700 font-medium underline">
               free self-serve enrichment
             </Link>{" "}
             (100 leads/month)
@@ -536,7 +536,7 @@ export default function LandingPage() {
             <ul className="space-y-2 text-xs text-muted-foreground">
               <li><Link href="#features" className="hover:text-gray-900">Features</Link></li>
               <li><Link href="#pricing" className="hover:text-gray-900">Pricing</Link></li>
-              <li><Link href="/fire-enrich" className="hover:text-gray-900">Free Tool</Link></li>
+              <li><Link href="/" className="hover:text-gray-900">Free Tool</Link></li>
             </ul>
           </div>
           

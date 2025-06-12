@@ -153,7 +153,7 @@ function GetStartedContent() {
                   Test our self-serve enrichment tool with 100 leads/month
                 </p>
                 <Button variant="outline" size="sm" asChild>
-                  <Link href="/fire-enrich">Try Free Tool</Link>
+                  <Link href="/">Try Free Tool</Link>
                 </Button>
               </div>
             </div>

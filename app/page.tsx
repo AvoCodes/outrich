@@ -5,9 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, Loader2 } from "lucide-react";
-import { CSVUploader } from "./fire-enrich/csv-uploader";
-import { UnifiedEnrichmentView } from "./fire-enrich/unified-enrichment-view";
-import { EnrichmentTable } from "./fire-enrich/enrichment-table";
+import { CSVUploader } from "@/components/fire-enrich/csv-uploader";
+import { UnifiedEnrichmentView } from "@/components/fire-enrich/unified-enrichment-view";
+import { EnrichmentTable } from "@/components/fire-enrich/enrichment-table";
 import { CSVRow, EnrichmentField } from "@/lib/types";
 import {
   Dialog,
