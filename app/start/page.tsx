@@ -297,7 +297,7 @@ export default function LandingPage() {
                   ))}
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "Our connect rates went from 20% to 85% overnight. This is game-changing for our outbound team."
+                  &ldquo;Our connect rates went from 20% to 85% overnight. This is game-changing for our outbound team.&rdquo;
                 </p>
                 <div className="border-t pt-4">
                   <p className="font-semibold text-gray-900">Sarah Chen</p>
@@ -314,7 +314,7 @@ export default function LandingPage() {
                   ))}
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "We saved 15 hours per week per rep. The ROI was immediate and massive."
+                  &ldquo;We saved 15 hours per week per rep. The ROI was immediate and massive.&rdquo;
                 </p>
                 <div className="border-t pt-4">
                   <p className="font-semibold text-gray-900">Mike Rodriguez</p>
@@ -331,7 +331,7 @@ export default function LandingPage() {
                   ))}
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "Finally, a service that actually validates phone numbers. No more wasted calls!"
+                  &ldquo;Finally, a service that actually validates phone numbers. No more wasted calls!&rdquo;
                 </p>
                 <div className="border-t pt-4">
                   <p className="font-semibold text-gray-900">Jessica Park</p>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -37,7 +37,7 @@ const plans = {
   }
 };
 
-export default function GetStartedPage() {
+function GetStartedContent() {
   const searchParams = useSearchParams();
   const [selectedPlan, setSelectedPlan] = useState<string>("scaling");
   const [formData, setFormData] = useState({
@@ -98,7 +98,7 @@ export default function GetStartedPage() {
             Get Started with Outrich
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Choose your verification package and we'll have you up and running within 24 hours.
+            Choose your verification package and we&apos;ll have you up and running within 24 hours.
           </p>
         </div>
 
@@ -129,7 +129,7 @@ export default function GetStartedPage() {
                         <div>
                           <div className="flex items-center gap-2">
                             <h3 className="font-semibold text-gray-900">{plan.name}</h3>
-                            {plan.popular && (
+                            {(plan as any).popular && (
                               <Badge className="bg-orange-600 text-white">Most Popular</Badge>
                             )}
                           </div>
@@ -305,7 +305,7 @@ export default function GetStartedPage() {
                 <ol className="space-y-3 text-sm text-gray-700">
                   <li className="flex items-start">
                     <span className="bg-orange-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-3 mt-0.5">1</span>
-                    <span>We'll contact you within 24 hours to confirm details</span>
+                    <span>We&apos;ll contact you within 24 hours to confirm details</span>
                   </li>
                   <li className="flex items-start">
                     <span className="bg-orange-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mr-3 mt-0.5">2</span>
@@ -322,5 +322,13 @@ export default function GetStartedPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function GetStartedPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <GetStartedContent />
+    </Suspense>
   );
 }
