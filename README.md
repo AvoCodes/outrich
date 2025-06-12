@@ -1,10 +1,10 @@
-# Fire Enrich - AI-Powered Data Enrichment Tool
+# Outrich - AI-Powered Lead Enrichment Tool
 
 <div align="center">
-  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjJwMnF2cW5zbXBhbGV6NXBpb3lkZmVhMWEwY3hmdmt3d3ZtbWc5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QhpbWI09KyFZ0rwD72/giphy.gif" alt="Fire Enrich Demo" width="100%" />
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjJwMnF2cW5zbXBhbGV6NXBpb3lkZmVhMWEwY3hmdmt3d3ZtbWc5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QhpbWI09KyFZ0rwD72/giphy.gif" alt="Outrich Demo" width="100%" />
 </div>
 
-Turn a simple list of emails into a rich dataset with company profiles, funding data, tech stacks, and more. Powered by [Firecrawl](https://www.firecrawl.dev/) and a multi-agent AI system.
+Get verified contact data in seconds. Turn basic email lists into complete contact profiles with company data, phone numbers, social profiles, and more. Powered by [Firecrawl](https://www.firecrawl.dev/) and AI.
 
 ## Technologies
 
@@ -67,7 +67,7 @@ Turn a simple list of emails into a rich dataset with company profiles, funding 
 
 ### Architecture Overview: Following "ericciarla@firecrawl.dev" Through the System
 
-Let's see exactly how Fire Enrich processes a real example - enriching data for the email ericciarla@firecrawl.dev.
+Let's see exactly how Outrich processes a real example - enriching data for the email ericciarla@firecrawl.dev.
 
 ```mermaid
 graph TD
@@ -213,7 +213,7 @@ const FundingResult = z.object({
 });
 ```
 
-**To extend Fire Enrich with new data extraction capabilities:**
+**To extend Outrich with new data extraction capabilities:**
 
 1. **Add to existing agent**: Modify the Zod schema in `/lib/agent-architecture/agents/[agent-name].ts`
 2. **Create a new agent**: Define a new schema and implement the `AgentBase` interface
@@ -227,7 +227,7 @@ The field routing system automatically categorizes user requests:
 - Fields with "tech" and "stack" → Tech Stack Agent
 - Everything else → General Purpose Agent
 
-This design allows Fire Enrich to grow with your needs while maintaining type safety and predictable behavior.
+This design allows Outrich to grow with your needs while maintaining type safety and predictable behavior.
 
 ### Process Flow
 
@@ -240,7 +240,7 @@ This design allows Fire Enrich to grow with your needs while maintaining type sa
 
 ### The Multi-Agent System
 
-Fire Enrich employs a sophisticated orchestration system that coordinates specialized extraction modules. These aren't autonomous AI agents, but rather purpose-built components that work together intelligently:
+Outrich employs a sophisticated orchestration system that coordinates specialized extraction modules. These aren't autonomous AI agents, but rather purpose-built components that work together intelligently:
 
 -   **Discovery Phase**: Establishes the foundation by identifying the company and its digital presence
 -   **Profile Extraction**: Specialized logic for industry classification and business model analysis
@@ -261,13 +261,13 @@ Each module uses GPT-4o for intelligent data extraction, but follows determinist
 
 ### Configuration & Unlimited Mode
 
-When you clone and run this repository locally, Fire Enrich automatically enables **Unlimited Mode**, removing the restrictions of the public demo. You can configure these limits in [`app/fire-enrich/config.ts`](app/fire-enrich/config.ts):
+When you clone and run this repository locally, Outrich automatically enables **Unlimited Mode**, removing the restrictions of the public demo. You can configure these limits in [`components/fire-enrich/config.ts`](components/fire-enrich/config.ts):
 
 ```typescript
-const isUnlimitedMode = process.env.FIRE_ENRICH_UNLIMITED === 'true' || 
+const isUnlimitedMode = process.env.OUTRICH_UNLIMITED === 'true' || 
                        process.env.NODE_ENV === 'development';
 
-export const FIRE_ENRICH_CONFIG = {
+export const OUTRICH_CONFIG = {
   CSV_LIMITS: {
     MAX_ROWS: isUnlimitedMode ? Infinity : 15,
     MAX_COLUMNS: isUnlimitedMode ? Infinity : 5,
@@ -280,7 +280,7 @@ export const FIRE_ENRICH_CONFIG = {
 
 ## Our Open Source Philosophy
 
-Let's be blunt: professional data enrichment services are expensive for a reason. Our goal with Fire Enrich isn't to replicate every feature of mature platforms overnight. Instead, we want to build a powerful, open-source foundation that anyone can use, understand, and contribute to.
+Let's be blunt: professional data enrichment services are expensive for a reason. Our goal with Outrich isn't to replicate every feature of mature platforms overnight. Instead, we want to build a powerful, open-source foundation that anyone can use, understand, and contribute to.
 
 This is just the start. By open-sourcing it, we're inviting you to join us on this journey.
 

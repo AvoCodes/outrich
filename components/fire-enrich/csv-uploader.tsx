@@ -7,7 +7,7 @@ import { CSVRow } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Upload, FileSpreadsheet, ChevronDown, ChevronUp, Zap, Mail, Download, Users } from 'lucide-react';
-import { FIRE_ENRICH_CONFIG, ERROR_MESSAGES } from './config';
+import { OUTRICH_CONFIG, ERROR_MESSAGES } from './config';
 
 interface CSVUploaderProps {
   onUpload: (rows: CSVRow[], columns: string[]) => void;
@@ -57,7 +57,7 @@ export function CSVUploader({ onUpload }: CSVUploaderProps) {
         const rows = results.data as CSVRow[];
 
         // Check column limit
-        if (headers.length > FIRE_ENRICH_CONFIG.CSV_LIMITS.MAX_COLUMNS) {
+        if (headers.length > OUTRICH_CONFIG.CSV_LIMITS.MAX_COLUMNS) {
           setError(
             `${ERROR_MESSAGES.TOO_MANY_COLUMNS}\n${ERROR_MESSAGES.UPGRADE_PROMPT}`
           );
@@ -77,7 +77,7 @@ export function CSVUploader({ onUpload }: CSVUploaderProps) {
         }
 
         // Check row limit
-        if (validRows.length > FIRE_ENRICH_CONFIG.CSV_LIMITS.MAX_ROWS) {
+        if (validRows.length > OUTRICH_CONFIG.CSV_LIMITS.MAX_ROWS) {
           setError(
             `${ERROR_MESSAGES.TOO_MANY_ROWS}\n${ERROR_MESSAGES.UPGRADE_PROMPT}`
           );

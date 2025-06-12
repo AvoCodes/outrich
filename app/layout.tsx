@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Fire Enrich",
-  description: "Enrich your data with AI-powered insights",
+  title: "Outrich",
+  description: "Get verified contact data in seconds with AI-powered lead enrichment",
 };
 
 export default function RootLayout({
