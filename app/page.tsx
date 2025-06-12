@@ -214,8 +214,22 @@ export default function HomePage() {
           </span>
         </h1>
         <p className="text-sm text-muted-foreground mt-3 opacity-0 animate-fade-up [animation-duration:500ms] [animation-delay:600ms] [animation-fill-mode:forwards]">
-          Unlimited enrichment • Self-deployment
+          Get verified contact data in seconds
         </p>
+        <div className="flex flex-wrap justify-center items-center gap-4 mt-4 text-xs text-green-700 opacity-0 animate-fade-up [animation-duration:500ms] [animation-delay:800ms] [animation-fill-mode:forwards]">
+          <div className="flex items-center gap-1">
+            <span className="text-green-600">✓</span>
+            <span>500K+ leads enriched</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <span className="text-green-600">✓</span>
+            <span>95% accuracy rate</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <span className="text-green-600">✓</span>
+            <span>GDPR compliant</span>
+          </div>
+        </div>
       </div>
 
       {/* Main Content */}
