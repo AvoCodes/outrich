@@ -1,0 +1,31 @@
+# Build outputsAdd commentMore actions
+.next
+dist
+build
+out
+
+# Dependencies
+node_modules
+
+# Cache
+.cache
+.eslintcache
+
+# Environment and config files
+.env*
+.env.local
+.env.*.local
+
+# Misc
+.DS_Store
+*.pem
+coverage
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Typescript
+*.tsbuildinfo
+next-env.d.ts
